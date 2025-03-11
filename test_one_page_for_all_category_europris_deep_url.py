@@ -166,29 +166,22 @@ def merge_csv_files(directory):
 
 
 if __name__ == "__main__":
-  # Uncomment to get all category links
-  # url_links = catagory_product_list()
-   #for url in url_links:
-     #product(url)
-  #   time.sleep(3)
   
-  #test_url = 'https://www.europris.no/dagligvarer'
-  #test_url = 'https://www.europris.no/dagligvarer/matvarer/salt-krydder'
+  #urls=[]
+  #with open('europris_categories-deep.txt','r') as f:
+    #urls = [line.split(' ')[1].strip('\n') for line in f if line.strip()]
   
-  #products = product(test_url)
-  #for prod in products:
-   # print(prod)
-  #print(products)
-  
-  # Uncomment to merge CSV files
-  # merge_csv_files('europris-csv-files')
+  #for url in urls:
+    #print(product(url))
+    
   urls=[]
-  with open('europris_categories-deep.txt','r') as f:
-    urls = [line.split(' ')[1].strip('\n') for line in f if line.strip()]
-     #print(urls)
+  url_1='https://raw.githubusercontent.com/yosief-dev/scrape/refs/heads/main/europris_categories-deep.txt'
+  response = requests.get(url_1, headers=headers)
+  result=response.text[:-1]
+  urls = [line.split(' ')[1] for line in result.split('\n')]
+  #print(response.text)
+  #print(urls)
   
   for url in urls:
     print(product(url))
-    
-
 
