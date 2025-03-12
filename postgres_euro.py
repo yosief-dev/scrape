@@ -21,10 +21,10 @@ date_now = current_date.strftime("%Y-%m-%d %H:%M:%S")
 #timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # Database connection parameters
-DB_NAME = "europris"
-DB_USER = "neondb_owner"
-DB_PASSWORD = "npg_KUczrMwh73qQ"
-DB_HOST = "ep-wispy-dust-a86a6yp6-pooler.eastus2.azure.neon.tech"
+DB_NAME = ""
+DB_USER = ""
+DB_PASSWORD = ""
+DB_HOST = ""
 DB_PORT = "5432"
 
 
